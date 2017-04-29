@@ -1,5 +1,9 @@
 # README
 
+![Build Status](https://codeship.com/projects/74ea9c20-0e9c-0135-dad5-2604a1807cee/status?branch=master)
+![Code Climate](https://codeclimate.com/github/marclevetin/myukuleleinfo.png)
+![Coverage Status](https://coveralls.io/repos/marclevetin/myukuleleinfo/badge.png)
+
 This repository has all the code necessary for starting a React on Rails application
 including testing. To get started, just clone the repository down and get started using
 React on Rails like you normally would.
