@@ -4,7 +4,9 @@ import ReactDOM from 'react-dom';
 
 $(function() {
   ReactDOM.render(
-    <h1>My Ukulele dot Info - Main.js</h1>,
+    <div className="row">
+      <h1>My Ukulele dot Info - Main.js</h1>
+    </div>,
     document.getElementById('app')
   );
 });
