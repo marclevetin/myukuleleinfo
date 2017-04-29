@@ -22,3 +22,6 @@
 
 # Ignore Coveralls coverage folder
 /coverage
+
+# Ignore .env file
+.env
