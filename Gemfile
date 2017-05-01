@@ -9,6 +9,7 @@ gem 'listen'
 gem 'foundation-rails'
 gem 'devise'
 gem 'fog'
+gem 'carrierwave', '~> 1.0'
 
 group :development, :test do
   gem 'capybara'
