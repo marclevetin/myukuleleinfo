@@ -10,10 +10,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170501162140) do
+ActiveRecord::Schema.define(version: 20170501225947) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "ukuleles", force: :cascade do |t|
+    t.string   "instrument_type",    null: false
+    t.string   "ukulele_shape"
+    t.string   "ukulele_size"
+    t.string   "luthier"
+    t.string   "model"
+    t.integer  "serial_number"
+    t.date     "purchase_date"
+    t.string   "body_top"
+    t.string   "body_sides"
+    t.string   "body_back"
+    t.string   "body_neck"
+    t.string   "body_fretboard"
+    t.string   "body_binding"
+    t.string   "tuner_type"
+    t.string   "tuner_manufacture"
+    t.string   "string_manufacture"
+    t.integer  "string_count"
+    t.string   "string_tuning"
+    t.string   "finish_type"
+    t.string   "finish_look"
+    t.string   "pickup"
+    t.string   "nut_material"
+    t.string   "saddle_material"
+    t.integer  "neck_width"
+    t.integer  "length_scale"
+    t.integer  "length_body"
+    t.integer  "width"
+    t.integer  "depth"
+    t.integer  "users_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.index ["users_id"], name: "index_ukuleles_on_users_id", using: :btree
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name",             default: "", null: false
