@@ -9,7 +9,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run webpack -- --watch",
-    "webpack": "node_modules/.bin/webpack --config ./react/webpack.config.js",
     "heroku-postbuild": "NODE_ENV=production npm run webpack -- -p"
   },
   "author": "Ivan Lasorsa",
