@@ -5,7 +5,7 @@ feature 'user signs in and out' do
   context 'user signs in' do
 
     scenario "specifying valid and required info" do
-      user = User.create(
+      User.create(
         first_name: 'My',
         last_name: 'Ukulele',
         email: 'my@ukulele.com',
@@ -48,7 +48,7 @@ feature 'user signs in and out' do
   context 'user signs out' do
 
     scenario "specifying valid and required info" do
-      user = User.create(
+      User.create(
         first_name: 'My',
         last_name: 'Ukulele',
         email: 'my@ukulele.com',
