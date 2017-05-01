@@ -44,7 +44,7 @@ feature "user signs up" do
       ("Password confirmation doesn't match Password")
     end
 
-    xscenario "user can upload an avatar photo" do
+    scenario "user can upload an avatar photo" do
 
       visit root_path
       click_link 'Register'
@@ -53,7 +53,7 @@ feature "user signs up" do
       fill_in 'Email', with: 'my@ukulele.com'
       fill_in 'Password', with: 'password'
       fill_in 'Password confirmation', with: 'password'
-      attach_file :avatar, "#{Rails.root}/spec/support/images/photo.png"
+      attach_file 'user_avatar', "#{Rails.root}/spec/support/images/photo.png"
       click_button 'Complete registration'
 
       expect(page).to have_content("Welcome! You have signed up successfully.")

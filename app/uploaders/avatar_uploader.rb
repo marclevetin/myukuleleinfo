@@ -46,9 +46,9 @@ class AvatarUploader < CarrierWave::Uploader::Base
   #   "something.jpg" if original_filename
   # end
 
-  # require that only a photo can be uploaded.
-  def content_type_whitelist
-    /image\//
-  end
+  # # require that only a photo can be uploaded.
+  # def content_type_whitelist
+  #   /image\//
+  # end
 
 end
