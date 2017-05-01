@@ -40,5 +40,20 @@ class AddUkuelelesTable < ActiveRecord::Migration[5.0]
 
       t.timestamps null: false
     end
+
+    create_table :instrument_type do |t|
+      t.string :instrument_type
+      t.belongs_to :ukuleles
+    end
+
+    create_table :ukulele_shape do |t|
+      t.string :ukulele_shape
+      t.belongs_to :ukuleles
+    end
+
+    create_table :ukulele_size do |t|
+      t.string :ukulele_size
+      t.belongs_to :ukuleles
+    end
   end
 end
