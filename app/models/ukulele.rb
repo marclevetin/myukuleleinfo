@@ -1,0 +1,3 @@
+class Ukulele < ApplicationRecord
+
+end
