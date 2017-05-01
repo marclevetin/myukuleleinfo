@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
 
-  user = User.create!(
+  # user = FactoryGirl.create(:user)
+  user = User.create(
     first_name: 'first',
     last_name: 'last',
     email: 'user@password.com',
@@ -22,6 +23,13 @@ RSpec.describe User, type: :model do
   end
 
   it "Email address is unique" do
+    user = User.create(
+      first_name: 'first',
+      last_name: 'last',
+      email: 'user@password.com',
+      password: 'password'
+    )
+
     second_user = User.new(
       first_name: 'second',
       last_name: 'last',

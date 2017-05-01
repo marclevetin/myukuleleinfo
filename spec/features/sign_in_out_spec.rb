@@ -4,16 +4,14 @@ feature 'user signs in and out' do
 
   context 'user signs in' do
 
-    let!(:user) do
-      User.create(
-      first_name: 'My',
-      last_name: 'Ukulele',
-      email: 'my@ukulele.com',
-      password: 'password'
-      )
-    end
-
     scenario "specifying valid and required info" do
+      user = User.create(
+        first_name: 'My',
+        last_name: 'Ukulele',
+        email: 'my@ukulele.com',
+        password: 'password'
+      )
+
       visit root_path
       click_link 'Sign in'
       fill_in 'Email', with: 'my@ukulele.com'
@@ -48,16 +46,15 @@ feature 'user signs in and out' do
   end
 
   context 'user signs out' do
-    let!(:user) do
-      User.create(
-      first_name: 'My',
-      last_name: 'Ukulele',
-      email: 'my@ukulele.com',
-      password: 'password'
-      )
-    end
 
     scenario "specifying valid and required info" do
+      user = User.create(
+        first_name: 'My',
+        last_name: 'Ukulele',
+        email: 'my@ukulele.com',
+        password: 'password'
+      )
+
       visit root_path
       click_link 'Sign in'
       fill_in 'Email', with: 'my@ukulele.com'
