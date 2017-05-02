@@ -10,6 +10,7 @@ gem 'foundation-rails'
 gem 'devise'
 gem 'fog'
 gem 'carrierwave', '~> 1.0'
+gem 'active_model_serializers'
 
 group :development, :test do
   gem 'capybara'
