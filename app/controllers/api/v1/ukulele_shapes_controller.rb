@@ -1,5 +1,5 @@
 class Api::V1::UkuleleShapesController < ApplicationController
   def index
-    render json: UkuleleShape.all
+    render json: { shapes: UkuleleShape.all }
   end
 end
