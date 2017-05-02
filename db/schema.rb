@@ -16,21 +16,15 @@ ActiveRecord::Schema.define(version: 20170501225947) do
   enable_extension "plpgsql"
 
   create_table "instrument_types", force: :cascade do |t|
-    t.string  "instrument_type"
-    t.integer "ukuleles_id"
-    t.index ["ukuleles_id"], name: "index_instrument_types_on_ukuleles_id", using: :btree
+    t.string "instrument_type", null: false
   end
 
   create_table "ukulele_shapes", force: :cascade do |t|
-    t.string  "ukulele_shape"
-    t.integer "ukuleles_id"
-    t.index ["ukuleles_id"], name: "index_ukulele_shapes_on_ukuleles_id", using: :btree
+    t.string "ukulele_shape", null: false
   end
 
   create_table "ukulele_sizes", force: :cascade do |t|
-    t.string  "ukulele_size"
-    t.integer "ukuleles_id"
-    t.index ["ukuleles_id"], name: "index_ukulele_sizes_on_ukuleles_id", using: :btree
+    t.string "ukulele_size", null: false
   end
 
   create_table "ukuleles", force: :cascade do |t|

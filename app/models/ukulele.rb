@@ -7,7 +7,7 @@ class Ukulele < ApplicationRecord
   validates :depth, numericality: true, allow_nil: true
   validates :string_count, numericality: true, allow_nil: true
 
-  has_many :ukulele_types
+  has_many :instrument_types
   has_many :ukulele_shapes
   has_many :ukulele_sizes
 

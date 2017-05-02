@@ -42,18 +42,15 @@ class AddUkuelelesTable < ActiveRecord::Migration[5.0]
     end
 
     create_table :instrument_types do |t|
-      t.string :instrument_type
-      t.belongs_to :ukuleles
+      t.string :instrument_type, null: false, unique: true
     end
 
     create_table :ukulele_shapes do |t|
-      t.string :ukulele_shape
-      t.belongs_to :ukuleles
+      t.string :ukulele_shape, null: false, unique: true
     end
 
     create_table :ukulele_sizes do |t|
-      t.string :ukulele_size
-      t.belongs_to :ukuleles
+      t.string :ukulele_size, null: false, unique: true
     end
   end
 end

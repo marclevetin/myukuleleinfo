@@ -1,5 +1,3 @@
 class UkuleleSize < ApplicationRecord
-  validates :ukulele_id, presence: true
-
-  belongs_to :ukuleles
+  validates :ukulele_size, presence: true, uniqueness: true
 end
