@@ -2,8 +2,8 @@ class AddUkuelelesTable < ActiveRecord::Migration[5.0]
   def change
     create_table :ukuleles do |t|
       t.string :instrument_type, null: false
-      t.string :ukulele_shape
-      t.string :ukulele_size
+      t.string :ukulele_shape, null: false
+      t.string :ukulele_size, null: false
       t.string :luthier
       t.string :model
       t.integer :serial_number
