@@ -11,4 +11,12 @@ class ApplicationController < ActionController::Base
       keys: [:first_name, :last_name, :avatar]
     )
   end
+
+  def after_sign_in_path_for(resource)
+    user_ukuleles_path(current_user)
+  end
+
+  def after_sign_out_path_for(resource)
+    root_path
+  end
 end
