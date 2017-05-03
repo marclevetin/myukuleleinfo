@@ -9,6 +9,8 @@ class Ukulele < ApplicationRecord
   validates :width, numericality: true, allow_nil: true
   validates :depth, numericality: true, allow_nil: true
 
+  belongs_to :user
+
   has_many :instrument_types
   has_many :ukulele_shapes
   has_many :ukulele_sizes

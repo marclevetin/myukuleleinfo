@@ -21,8 +21,10 @@
         <%= link_to "Sign in", new_user_session_path%>
       <% end %>
     </div>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class='row'>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
     <%= yield %>
 
   </body>

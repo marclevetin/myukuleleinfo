@@ -29,8 +29,8 @@ class AddUkuelelesTable < ActiveRecord::Migration[5.0]
       t.integer :length_body
       t.integer :width
       t.integer :depth
-      
-      t.belongs_to :users
+
+      t.belongs_to :user
 
       t.timestamps null: false
     end
