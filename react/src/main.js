@@ -1,16 +1,21 @@
 import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route, Link, browserHistory } from 'react-router';
+import Layout from './containers/Layout'
+import HomePageContainer from './containers/HomePageContainer'
 import UkuleleList from './containers/UkuleleList'
+
 
 $(function() {
   ReactDOM.render(
     <div className="row">
-      <h1>My Ukulele dot Info</h1>
-      <p>A website that allows ukulele enthusiasts afflicted with "UAS" -
-      "Ukulele Acquisition Syndrome" - to share their collections with the world online, share through social media, and seek inspiration for their next purchase.
-      </p>
-      <UkuleleList />
+      <Router history={browserHistory}>
+        <Route path='/' component={Layout}>
+          <Route path='home' component={HomePageContainer} />
+          <Route path='/users/:id/ukuleles' component={UkuleleList} />
+        </Route>
+      </Router>
     </div>,
     document.getElementById('app')
   );

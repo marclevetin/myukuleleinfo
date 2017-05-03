@@ -23,6 +23,7 @@ RSpec.describe Ukulele, type: :model do
     end
 
     it "string count must be a number" do
+      uke3 = FactoryGirl.create(:ukulele)
       uke = Ukulele.create!(
         instrument_type: 'ukulele',
         ukulele_shape: 'double bout',
