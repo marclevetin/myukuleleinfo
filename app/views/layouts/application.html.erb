@@ -13,16 +13,24 @@
 
   <body>
     <div class='row'>
-      <% if user_signed_in? %>
-        <%= link_to "Edit account", edit_user_registration_path %> |
-        <%= link_to "Sign out", destroy_user_session_path, :method => 'delete' %>
-      <% else %>
-        <%= link_to "Register", new_user_registration_path %> |
-        <%= link_to "Sign in", new_user_session_path%>
-      <% end %>
+      <div class="small-12">
+        <% if user_signed_in? %>
+          <%= link_to "Edit account", edit_user_registration_path %> |
+          <%= link_to "Sign out", destroy_user_session_path, :method => 'delete' %>
+        <% else %>
+          <%= link_to "Register", new_user_registration_path %> |
+          <%= link_to "Sign in", new_user_session_path%>
+        <% end %>
+        <div data-alert class="alert-box">
+          <%= notice %>
+          <!-- <a href="#" class="close">&times;</a> -->
+        </div>
+        <div data-alert class="alert-box">
+          <%= alert %>
+          <!-- <a href="#" class="close">&times;</a> -->
+        </div>
+      </div>
     </div>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <%= yield %>
 
   </body>
