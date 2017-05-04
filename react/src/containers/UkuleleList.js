@@ -12,8 +12,8 @@ class UkuleleList extends Component {
       ukuleles: []
     }
 
-  this.componentDidMount = this.componentDidMount.bind(this)
-  this.addLocalUkulele = this.addLocalUkulele.bind(this)
+  this.componentDidMount = this.componentDidMount.bind(this);
+  this.addLocalUkulele = this.addLocalUkulele.bind(this);
   }
 
   componentDidMount(){
@@ -28,7 +28,6 @@ class UkuleleList extends Component {
     this.setState({
       ukuleles: this.state.ukuleles.concat([ukulele])
     })
-    debugger;
   }
 
   render() {

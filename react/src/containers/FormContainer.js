@@ -12,8 +12,8 @@ class FormContainer extends Component {
         ukulele_size: "",
         luthier: ""
     }
-    this.handleInput = this.handleInput.bind(this)
-    this.handleFormSubmit = this.handleFormSubmit.bind(this)
+    this.handleInput = this.handleInput.bind(this);
+    this.handleFormSubmit = this.handleFormSubmit.bind(this);
   }
 
   handleInput(event) {
