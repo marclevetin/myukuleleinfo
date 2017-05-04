@@ -11,17 +11,17 @@ class Api::V1::UkulelesController < ApplicationController
   def add_ukulele
     @current_user = current_user
     @ukulele = Ukulele.new(
-      instrument_type:sanitize(params[:instrument_type]),
-      luthier:sanitize(params[:luthier]),
-      ukulele_shape:sanitize(params[:ukulele_shape]),
-      ukulele_size:sanitize(params[:ukulele_size])
+      instrument_type: sanitize(params[:instrument_type]),
+      luthier: sanitize(params[:luthier]),
+      ukulele_shape: sanitize(params[:ukulele_shape]),
+      ukulele_size: sanitize(params[:ukulele_size])
     )
     @ukulele.user_id = @current_user.id
     if @ukulele.valid?
       @ukulele.save
-      render json: {status: "Success", ukulele: @ukulele}
+      render json: { status: "Success", ukulele: @ukulele }
     else
-      render json: {errors: @ukulele.errors.full_messages}
+      render json: { errors: @ukulele.errors.full_messages }
     end
   end
 
