@@ -38,5 +38,6 @@ class Api::V1::UkulelesController < ApplicationController
 
   def sanitize(input)
     ActionController::Base.helpers.sanitize(input)
+
   end
 end
