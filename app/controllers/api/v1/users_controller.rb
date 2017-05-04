@@ -7,3 +7,4 @@ class Api::V1::UsersController < ApplicationController
     @ukuleles = Ukulele.where(user_id: @current_user.id)
     render json: {current_user: @current_user, events: @events }
   end
+end
