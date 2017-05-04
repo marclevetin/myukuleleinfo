@@ -6,7 +6,6 @@ const Ukulele = (props) => {
       <td>{props.type}</td>
       <td>{props.size}</td>
       <td>{props.shape}</td>
-      <td>{props.luthier}</td>
     </tr>
   )
 }
