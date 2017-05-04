@@ -1,3 +1,29 @@
-<div id="app">
+<div class="row">
+  <div class="small-10 medium-6 large-6 columns">
+    <%= form_for [@user, @ukulele] do |f| %>
+      <div class="field">
+        <%= f.label :instrument_type %><br />
+        <%= f.text_field :instrument_type, autofocus: true %>
+      </div>
 
+      <div class="field">
+        <%= f.label :ukulele_shape %><br />
+        <%= f.text_field :ukulele_shape, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :ukulele_size %><br />
+        <%= f.text_field :ukulele_size, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :luthier %><br />
+        <%= f.text_field :luthier, autofocus: true %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Add a ukulele" %>
+      </div>
+    <% end %>
+  </div>
 </div>

@@ -14,8 +14,10 @@
   <body>
     <div class='row'>
       <div class="small-12">
+        Logo placeholder
         <% if user_signed_in? %>
-          <%= link_to "Edit account", edit_user_registration_path %> |
+          <%= link_to "My Ukuleles", user_ukuleles_path(current_user) %>
+          <%= link_to "My account", edit_user_registration_path %> |
           <%= link_to "Sign out", destroy_user_session_path, :method => 'delete' %>
         <% else %>
           <%= link_to "Register", new_user_registration_path %> |
@@ -31,7 +33,7 @@
         </div>
       </div>
     </div>
-    
+
     <%= yield %>
 
   </body>
