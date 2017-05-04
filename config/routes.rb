@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'home', to: 'static_pages#index'
 
   resources :users, only: [:show] do
-    resources :ukuleles, only: [:index]
+    resources :ukuleles, only: [:index, :new, :create]
   end
 
   namespace :api do
@@ -14,6 +14,8 @@ Rails.application.routes.draw do
       resources :instrument_types, only: [:index]
       resources :ukulele_sizes, only: [:index]
       resources :ukulele_shapes, only: [:index]
+      resources :users, only: [:index]
+      get '/addUkulele' => 'ukuleles#add_ukulele'
     end
   end
 end
