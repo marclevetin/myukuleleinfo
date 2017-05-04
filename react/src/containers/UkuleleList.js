@@ -1,5 +1,8 @@
 import React, {Component} from 'react'
+import { Link } from 'react-router'
 import Ukulele from '../components/Ukulele'
+import FormContainer from './FormContainer'
+import {getUserUkuleles} from '../components/network'
 
 class UkuleleList extends Component {
   constructor(props) {
@@ -8,24 +11,23 @@ class UkuleleList extends Component {
     this.state = {
       ukuleles: []
     }
+
+  this.componentDidMount = this.componentDidMount.bind(this);
+  this.addLocalUkulele = this.addLocalUkulele.bind(this);
   }
 
-  componentDidMount() {
-    fetch('/api/v1/ukuleles')
-      .then(response => {
-        if (response.ok) {
-          return response;
-        } else {
-          let errorMessage = `${response.status} (${response.statusText})`,
-              error = new Error(errorMessage);
-          throw(error);
-        }
-      })
-      .then(response => response.json())
-      .then(body => {
-        this.setState({ ukuleles: body.ukuleles });
-      })
-      .catch(error => console.error(`Error in fetch: ${error.message}`));
+  componentDidMount(){
+    getUserUkuleles()
+    .then(response => response.json())
+    .then(json => {
+      this.setState({ukuleles: json.ukuleles})
+    })
+  }
+
+  addLocalUkulele(ukulele) {
+    this.setState({
+      ukuleles: this.state.ukuleles.concat([ukulele])
+    })
   }
 
   render() {
@@ -37,21 +39,27 @@ class UkuleleList extends Component {
           type={uke.instrument_type}
           size={uke.ukulele_size}
           shape={uke.ukulele_shape}
+          luthier={uke.luthier}
         />
       )
     })
 
     return(
-      <div>
-        <h1>Ukulele list</h1>
-        <table>
-          <tbody>
-          <tr>
-            <th>Type</th><th>Size</th><th>Shape</th>
-          </tr>
-              {ukuleles}
-          </tbody>
-        </table>
+      <div className="row">
+        <div className="small-10 medium-6 large-6 columns">
+          <h1>Ukulele list</h1>
+          <table>
+            <tbody>
+            <tr>
+              <th>Type</th><th>Size</th><th>Shape</th><th>Luthier</th>
+            </tr>
+                {ukuleles}
+            </tbody>
+          </table>
+          <FormContainer
+          addLocalUkulele = {this.addLocalUkulele}
+          />
+        </div>
       </div>
     )
   }
