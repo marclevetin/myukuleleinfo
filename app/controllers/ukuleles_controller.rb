@@ -6,6 +6,9 @@ class UkulelesController < ApplicationController
   def new
     @ukulele = Ukulele.new
     @user = current_user
+    @instrument_type = InstrumentType.all
+    @ukulele_shape = UkuleleShape.all
+    @ukulele_size = UkuleleSize.all
   end
 
   def create
@@ -20,6 +23,17 @@ class UkulelesController < ApplicationController
       flash[:alert] = "Ukulele didn't save.  Try again."
       render :new
     end
+  end
+
+  def show
+    @ukulele = Ukulele.find(params[:id])
+  end
+
+  def destroy
+    binding.pry
+    @user = current_user
+    @ukulele = Ukulele.find(params[:id])
+    redirect_to user_ukuleles_path(@user)
   end
 
   private

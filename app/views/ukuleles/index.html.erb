@@ -5,7 +5,10 @@
     <table>
       <tbody>
       <tr>
-        <th>Type</th><th>Size</th><th>Shape</th>
+        <th>Type</th>
+        <th>Size</th>
+        <th>Shape</th>
+        <th>Luthier</th>
       </tr>
         <tr>
           <% @ukuleles.each do |uke| %>
@@ -17,6 +20,12 @@
           </td>
           <td>
             <%= uke.ukulele_shape %>
+          </td>
+          <td>
+            <%= uke.luthier %>
+          </td>
+          <td>
+            <%= link_to "more", user_ukulele_path(current_user, uke.id) %>
           </td>
         </tr>
           <% end %>
