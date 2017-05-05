@@ -1,3 +1,44 @@
-<div id="app">
-  
+<% content_for :title do %>
+  My Ukuleles
+<% end %>
+<div class="row">
+  <div class="small-10 medium-6 large-6 columns">
+    <h1>My Ukuleles</h1>
+    <%=  link_to "Add a ukulele", new_user_ukulele_path(current_user) %>
+    <table>
+      <tbody>
+      <tr>
+        <th>Type</th>
+        <th>Size</th>
+        <th>Shape</th>
+        <th>Luthier</th>
+      </tr>
+        <tr>
+          <% @ukuleles.each do |uke| %>
+          <td>
+            <%= uke.instrument_type %>
+          </td>
+          <td>
+            <%= uke.ukulele_size %>
+          </td>
+          <td>
+            <%= uke.ukulele_shape %>
+          </td>
+          <td>
+            <%= uke.luthier %>
+          </td>
+          <td>
+            <%= link_to "more", user_ukulele_path(current_user, uke.id) %>
+          </td>
+        </tr>
+          <% end %>
+      </tbody>
+    </table>
+
+    <h1>My Videos</h1>
+      Add a video
+
+    <h1>My Sound clips</h1>
+      Add a sound clip
+  </div>
 </div>

@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   get 'home', to: 'static_pages#index'
 
-  resources :users, only: [:show] do
-    resources :ukuleles, only: [:index, :new, :create]
+  resources :users do
+    resources :ukuleles
   end
 
   namespace :api do
