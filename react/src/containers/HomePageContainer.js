@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import TextBlock from '../components/TextBlock'
-import Search from '../containers/Search'
+import SearchContainer from '../containers/SearchContainer'
 import FormInput from '../components/FormInput'
 
 class HomePageContainer extends Component {
@@ -31,7 +31,7 @@ class HomePageContainer extends Component {
           body = {`A website that allows ukulele enthusiasts afflicted with "UAS" -
           "Ukulele Acquisition Syndrome" - to share their collections with the world online, share through social media, and seek inspiration for their next purchase.`}
         />
-        <Search
+        <SearchContainer
           name = {"Search"}
           handleChange = {this.handleChange}
           handleFormSubmit = {this.handleFormSubmit}
