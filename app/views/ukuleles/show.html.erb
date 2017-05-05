@@ -2,6 +2,7 @@
 <div class="small-12 columns">
   <h1>Need a uke nickname</h1>
   <%= link_to 'Delete', user_ukulele_path(@ukulele), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Change', edit_user_ukulele_path(current_user, @ukulele) %>
 </div>
 </div>
 <div class="row">
