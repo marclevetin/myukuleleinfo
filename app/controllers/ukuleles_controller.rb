@@ -1,6 +1,12 @@
 class UkulelesController < ApplicationController
+  before_action :set_uke, only [:edit, :destroy]
+
   def index
     @ukuleles = Ukulele.all
+  end
+
+  def edit
+
   end
 
   def new
@@ -30,13 +36,17 @@ class UkulelesController < ApplicationController
   end
 
   def destroy
-    binding.pry
-    @user = current_user
-    @ukulele = Ukulele.find(params[:id])
-    redirect_to user_ukuleles_path(@user)
+    @ukulele.destroy
+    respond_to do |format|
+      format.html { redirect_to user_ukuleles_path(current_user), notice: 'Ukulele was successfully deleted.' }
+      format.json { head :no_content }
+    end
   end
 
   private
+  def set_uke
+    @ukelele = Ukulele.find(params[:id])
+  end
 
   def ukulele_params
     params.require(:ukulele).permit(
