@@ -1,10 +1,11 @@
+<% content_for :title do %>
+  Change a ukulele
+<% end %>
 <div class="row">
   <div class="small-10 medium-6 large-6 columns">
     <h1>Change a ukulele</h1>
     <%= form_for [current_user, @ukulele] do |f| %>
     <div id="error_explanation">
-      <h2><%= pluralize(@ukulele.errors.count, "error") %> prohibited this ukulele from being saved:</h2>
-
       <ul>
         <% @ukulele.errors.full_messages.each do |message| %>
         <li><%= message %></li>
