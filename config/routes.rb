@@ -11,11 +11,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :ukuleles, only: [:index, :create]
-      resources :instrument_types, only: [:index]
-      resources :ukulele_sizes, only: [:index]
-      resources :ukulele_shapes, only: [:index]
       resources :users, only: [:index]
-      get '/addUkulele' => 'ukuleles#add_ukulele'
     end
   end
 end

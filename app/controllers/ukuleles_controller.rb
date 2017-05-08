@@ -1,5 +1,7 @@
 class UkulelesController < ApplicationController
+  before_action :authenticate_user!, except: [:show]
   before_action :set_uke, only: [:edit, :destroy, :update]
+
 
   def create
     @user = current_user
