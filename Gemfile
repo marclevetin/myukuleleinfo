@@ -12,6 +12,7 @@ gem 'fog'
 gem 'carrierwave', '~> 1.0'
 gem 'active_model_serializers'
 gem 'pg_search'
+gem "mini_magick"
 
 group :development, :test do
   gem 'capybara'
