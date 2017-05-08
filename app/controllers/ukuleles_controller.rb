@@ -89,7 +89,8 @@ class UkulelesController < ApplicationController
       :length_scale,
       :length_body,
       :width,
-      :depth
+      :depth,
+      {photos: []}
     )
   end
 

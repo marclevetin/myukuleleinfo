@@ -155,6 +155,12 @@
           <%= f.label :length_body %>
           <%= f.number_field :length_body, autofocus: true %>
         </div>
+
+        <div class="field">
+          <%= f.label :photos %>
+          <%= f.file_field :photos, multiple: true %>
+        </div>
+
       <% end %>
 
       <div class="actions">
