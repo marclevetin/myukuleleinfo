@@ -6,7 +6,7 @@ const FormInput = (props) => {
     <form>
       <input
         type="text"
-        placeholder="Ukulele search"
+        placeholder="Search for a ukulele"
         content = {props.content}
         value = {props.name}
         onChange = {props.handleChange}

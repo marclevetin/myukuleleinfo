@@ -51,12 +51,11 @@ class SearchContainer extends Component {
     })
 
     return(
-      <div>
+      <div className='search'>
         <FormInput
           content = {this.state.content}
           handleChange = {this.handleChange}
          />
-        Results
         <table>
           <tbody>
           <tr>

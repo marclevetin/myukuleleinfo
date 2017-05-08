@@ -27,7 +27,7 @@ class HomePageContainer extends Component {
     return(
       <div>
         <TextBlock
-          title = {"My Ukulele dot Info"}
+          title = {"Welcome"}
           body = {`A website that allows ukulele enthusiasts afflicted with "UAS" -
           "Ukulele Acquisition Syndrome" - to share their collections with the world online, share through social media, and seek inspiration for their next purchase.`}
         />
