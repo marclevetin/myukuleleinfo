@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Ukulele from '../components/Ukulele'
+import FormInput from '../components/FormInput'
 
 class SearchContainer extends Component {
   constructor(props) {
@@ -7,29 +8,37 @@ class SearchContainer extends Component {
 
     this.state = {
       ukuleles: [],
-      terms: ""
+      terms: "",
+      content: "",
+      returnedData: []
     }
+
+    this.handleChange = this.handleChange.bind(this)
+    this.getSearchResults = this.getSearchResults.bind(this)
   }
 
-  componentDidMount() {
-    fetch('/api/v1/ukuleles')
-      .then(response => {
-        if (response.ok) {
-          return response;
-        } else {
-          let errorMessage = `${response.status} (${response.statusText})`,
-              error = new Error(errorMessage);
-          throw(error);
-        }
-      })
-      .then(response => response.json())
-      .then(body => {
-        this.setState({ ukuleles: body.ukuleles });
-      })
-      .catch(error => console.error(`Error in fetch: ${error.message}`));
+  getSearchResults() {
+    let query = { query: this.state.content }
+    fetch(`/api/v1/ukuleles`, {
+      method: 'POST',
+      credentials: 'include',
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(query)
+    })
+    .then(response => response.json())
+    .then(responseData => {
+      this.setState({ ukuleles: responseData })
+    });
+  }
+
+  handleChange(event) {
+    this.setState({ content: event.target.value });
+    this.getSearchResults();
   }
 
   render() {
+    let results = this.state.ukuleles["ukuleles"]
+    debugger;
     let ukuleles = this.state.ukuleles.map(uke => {
       return(
         <Ukulele
@@ -44,7 +53,10 @@ class SearchContainer extends Component {
 
     return(
       <div>
-        Search bar goes here
+        <FormInput
+          content = {this.state.content}
+          handleChange = {this.handleChange}
+         />
         Results
         <table>
           <tbody>
