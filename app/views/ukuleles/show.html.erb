@@ -1,9 +1,9 @@
 <% content_for :title do %>
-  Need a uke nickname
+  <%= @nickname %>
 <% end %>
 <div class="row">
 <div class="small-12 columns">
-  <h1>Need a uke nickname</h1>
+  <h1><%= @nickname %></h1>
   <%= link_to 'Delete', user_ukulele_path(@ukulele), method: :delete, data: { confirm: 'Are you sure?' } %>
   <%= link_to 'Change', edit_user_ukulele_path(current_user, @ukulele) %>
 </div>
@@ -116,9 +116,18 @@
 </div>
 <div class="row">
   <div class="small-12 columns">
-    <h2>Pictures coming soon</h2>
-    <div class="small-12 medium-6 large-4 columns">
-    </div>
+    <h2>Pictures</h2>
+  </div>
+</div>
+<div class="row">
+  <ul class="clearing-thumbs" data-clearing>
+    <ul>
+      <% @ukulele.photos.each do |pic| %>
+        <li><a href="<%= pic.url %>"><img src="<%= pic.url %>"></a></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
   </div>
 </div>
 <div class="row">

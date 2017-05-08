@@ -43,6 +43,7 @@ class UkulelesController < ApplicationController
 
   def show
     @ukulele = Ukulele.find(params[:id])
+    @nickname = set_nickname
   end
 
   def update
@@ -58,6 +59,14 @@ class UkulelesController < ApplicationController
   private
   def set_uke
     @ukulele = Ukulele.find(params[:id])
+  end
+
+  def set_nickname
+    if @ukulele.nickname
+      @ukulele.nickname
+    else
+      "My Ukulele"
+    end
   end
 
   def ukulele_params
@@ -89,7 +98,8 @@ class UkulelesController < ApplicationController
       :length_scale,
       :length_body,
       :width,
-      :depth
+      :depth,
+      {photos: []}
     )
   end
 

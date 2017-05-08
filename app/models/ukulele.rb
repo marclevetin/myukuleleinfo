@@ -14,4 +14,6 @@ class Ukulele < ApplicationRecord
   has_many :instrument_types
   has_many :ukulele_shapes
   has_many :ukulele_sizes
+
+  mount_uploaders :photos, UkulelePhotosUploader
 end
