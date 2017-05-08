@@ -16,7 +16,11 @@ class Api::V1::UkulelesController < ApplicationController
     @ukuleles = Ukulele.all
     if params[:query]
       query = params[:query]
-      @ukuleles = Ukulele.where("instrument_type ilike ?", "%#{query}%")
+      @found_records = PgSearch.multisearch(query)
+      @ukuleles = []
+      @found_records.each do |result|
+        @ukuleles << Ukulele.find(result.searchable_id)
+      end
       render json: { ukuleles: @ukuleles }
     else
       @ukuleles = ""

@@ -38,6 +38,7 @@ class SearchContainer extends Component {
 
   render() {
     let searchResults = this.state.ukuleles["ukuleles"]
+    console.log(searchResults)
     let ukuleles = searchResults.map(uke => {
       return(
         <Ukulele
