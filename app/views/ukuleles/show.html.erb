@@ -120,12 +120,11 @@
   </div>
 </div>
 <div class="row">
-  <ul class="clearing-thumbs" data-clearing>
-    <ul>
-      <% @ukulele.photos.each do |pic| %>
-        <li><a href="<%= pic.url %>"><img src="<%= pic.url %>"></a></li>
-      <% end %>
-    </ul>
+  <ul>
+    <% @ukulele.photos.each do |pic| %>
+      <li><a href="<%= pic.url %>"><img src="<%= pic.url %>"></a></li>
+    <% end %>
+  </ul>
   </div>
 </div>
   </div>
