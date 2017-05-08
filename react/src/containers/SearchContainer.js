@@ -7,7 +7,7 @@ class SearchContainer extends Component {
     super(props);
 
     this.state = {
-      ukuleles: [],
+      ukuleles: {ukuleles: []},
       terms: "",
       content: "",
       returnedData: []
@@ -37,9 +37,8 @@ class SearchContainer extends Component {
   }
 
   render() {
-    let results = this.state.ukuleles["ukuleles"]
-    debugger;
-    let ukuleles = this.state.ukuleles.map(uke => {
+    let searchResults = this.state.ukuleles["ukuleles"]
+    let ukuleles = searchResults.map(uke => {
       return(
         <Ukulele
           key={uke.id}

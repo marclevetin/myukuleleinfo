@@ -34,7 +34,6 @@ class UkulelesController < ApplicationController
 
 
   def new
-    binding.pry
     @ukulele = Ukulele.new
     @user = current_user
     @instrument_type = InstrumentType.all
@@ -44,6 +43,7 @@ class UkulelesController < ApplicationController
 
   def show
     @ukulele = Ukulele.find(params[:id])
+    @nickname = set_nickname
   end
 
   def update
@@ -59,6 +59,14 @@ class UkulelesController < ApplicationController
   private
   def set_uke
     @ukulele = Ukulele.find(params[:id])
+  end
+
+  def set_nickname
+    if @ukulele.nickname
+      @ukulele.nickname
+    else
+      "My Ukulele"
+    end
   end
 
   def ukulele_params

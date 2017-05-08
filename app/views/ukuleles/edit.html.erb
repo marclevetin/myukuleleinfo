@@ -12,6 +12,12 @@
         <% end %>
       </ul>
     </div>
+
+      <div class="field">
+        <%= f.label :nickname %>
+        <%= f.text_field :nickname, autofocus: true %>
+      </div>
+
       <%= field_set_tag "Basics (required)" do %>
         <div class="field">
           <%= f.label :instrument_type %>
@@ -161,6 +167,11 @@
         <div class="field">
           <%= f.label :length_body %>
           <%= f.number_field :length_body, autofocus: true %>
+        </div>
+
+        <div class="field">
+          <%= f.label :photos %>
+          <%= f.file_field :photos, multiple: true %>
         </div>
       <% end %>
 
