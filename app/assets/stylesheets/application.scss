@@ -11,8 +11,78 @@ $grey: #666666;
 
 h1, h2, h3, h4, h5, h6, th {
   font-family: 'Carter One', cursive;
+
+  color: $blue
 }
+
 
 p, td {
   font-family: 'Montserrat', sans-serif;
+  color: $grey;
+  font-size: 100%;
+}
+
+legend {
+  font-family: 'Carter One', cursive;
+  color: $blue;
+  font-size: 125%;
+  background-color: white;
+  padding: .5em;
+}
+body {
+  background-color: $beige;
+  background-image: url("https://s3.amazonaws.com/my-ukulele-info/background.jpg");
+  background-repeat: no-repeat;
+  background-blend-mode: screen, darken;
+
+}
+
+a {
+  color: $blue;
+}
+
+a.visited {
+  color: $purple;
+}
+
+a.hover {
+  color: $orange;
+}
+
+table {
+  background-color: $orange;
+}
+
+form {
+  background-color: $orange;
+  padding: .5em;
+}
+
+fieldset {
+  background-color: $white;
+  margin: .5em;
+  padding: .5em;
+}
+
+h1.title {
+  color: $purple;
+  font-weight: 900;
+}
+
+#nav {
+  background-color: $orange;
+}
+
+#main-column {
+  background-color: white;
+}
+
+.textrow {
+  background-color: white;
+  padding: 2em;
+  border: 1em;
+}
+
+.ukulelerow {
+  padding: 1em
 }

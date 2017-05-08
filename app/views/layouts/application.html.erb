@@ -12,14 +12,14 @@
   </head>
 
   <body>
-    <div class='row'>
+    <div id='nav' class='row'>
       <div class="small-6 columns text-left">
-        My Ukulele Info
+          <h1 class="title"><%= link_to "My Ukulele Info", root_path %></h1>
       </div>
       <div class="small-6 columns text-right">
         <% if user_signed_in? %>
           Signed in as <%= current_user.first_name %> |
-          <%= link_to "My Ukuleles", user_ukuleles_path(current_user) %> | 
+          <%= link_to "My Ukuleles", user_ukuleles_path(current_user) %> |
           <%= link_to "My account", edit_user_registration_path %> |
           Share |
           <%= link_to "Sign out", destroy_user_session_path, :method => 'delete' %>
