@@ -34,6 +34,7 @@ class UkulelesController < ApplicationController
 
 
   def new
+    binding.pry
     @ukulele = Ukulele.new
     @user = current_user
     @instrument_type = InstrumentType.all
