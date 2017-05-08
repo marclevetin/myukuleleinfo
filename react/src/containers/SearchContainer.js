@@ -56,7 +56,7 @@ class SearchContainer extends Component {
           content = {this.state.content}
           handleChange = {this.handleChange}
          />
-        Results
+        <h2>Results</h2>
         <table>
           <tbody>
           <tr>
