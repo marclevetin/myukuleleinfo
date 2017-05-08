@@ -1,7 +1,7 @@
 @import "foundation_and_overrides";
 /* Add imports of custom sass/scss files here */
+@import url('https://fonts.googleapis.com/css?family=Carter+One|Montserrat');
 // http://www.colourlovers.com/palette/1788332/Fly_Away?widths=0
-// $primary-color: #333
 $beige: #D8C8BB;
 $orange: #E2A054;
 $red: #D3604E;
@@ -11,6 +11,7 @@ $grey: #666666;
 
 h1, h2, h3, h4, h5, h6, th {
   font-family: 'Carter One', cursive;
+
   color: $blue
 }
 
