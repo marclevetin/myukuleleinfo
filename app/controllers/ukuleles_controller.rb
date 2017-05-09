@@ -32,6 +32,10 @@ class UkulelesController < ApplicationController
 
   def index
     @ukuleles = Ukulele.all
+    @vbulletin = []
+    @ukuleles.each do |uke|
+      @vbulletin << uke.vbulletin
+    end
   end
 
 
@@ -46,6 +50,7 @@ class UkulelesController < ApplicationController
   def show
     @ukulele = Ukulele.find(params[:id])
     @nickname = set_nickname
+    @vbulletin = @ukulele.vbulletin
   end
 
   def update

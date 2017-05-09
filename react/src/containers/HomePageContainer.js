@@ -28,8 +28,8 @@ class HomePageContainer extends Component {
       <div>
         <TextBlock
           title = {"Welcome"}
-          body = {`A website that allows ukulele enthusiasts afflicted with "UAS" -
-          "Ukulele Acquisition Syndrome" - to share their collections with the world online, share through social media, and seek inspiration for their next purchase.`}
+          body = {`Got "UAS" - "Ukulele Acquisition Syndrome"?
+          Share your collection with the world, share through social media, and seek inspiration for your next purchase.`}
         />
         <SearchContainer
           name = {"Search"}
