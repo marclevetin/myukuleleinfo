@@ -12,6 +12,7 @@
         <th>Size</th>
         <th>Shape</th>
         <th>Luthier</th>
+        <th>&nbsp;</th>
       </tr>
         <tr>
           <% @ukuleles.each do |uke| %>
@@ -34,11 +35,24 @@
           <% end %>
       </tbody>
     </table>
-
-    <h1>My Videos</h1>
-      Add a video
-
-    <h1>My Sound clips</h1>
-      Add a sound clip
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 columns">
+    <h2>Share</h2>
+    <p>
+      Copy and paste the code below into your profile on <a href="http://forum.ukuleleunderground.com/profile.php?do=updatesignature" target="_blank">Ukulele Underground forums.</a>
+    </p>
+    <div class="small-12">
+      <pre>
+        <code>
+          [B]My Ukuleles[/B]
+          <% @ukuleles.each do |uke| %>
+            [URL="<%= request.base_url %><%= user_ukulele_path(current_user, uke.id) %>"]<%= uke.vbulletin %>[/URL]
+          <% end %>
+          [SIZE=1][I][URL="http://my-ukulele-info.heroku.com"]Powered by My Ukulele Info[/URL][/I][/SIZE]
+        </code>
+      </pre>
+    </div>
   </div>
 </div>

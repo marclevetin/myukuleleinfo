@@ -11,10 +11,8 @@ $grey: #666666;
 
 h1, h2, h3, h4, h5, h6, th {
   font-family: 'Carter One', cursive;
-
-  color: $blue
+  color: $blue;
 }
-
 
 p, td {
   font-family: 'Montserrat', sans-serif;
@@ -85,4 +83,12 @@ h1.title {
 
 .ukulelerow {
   padding: 1em
+}
+
+pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 1em;
+  word-wrap: break-word;
 }

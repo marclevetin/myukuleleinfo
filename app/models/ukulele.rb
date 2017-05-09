@@ -50,5 +50,8 @@ class Ukulele < ApplicationRecord
 
   mount_uploaders :photos, UkulelePhotosUploader
 
+  def vbulletin
+    "#{self.luthier} #{self.model} #{self.ukulele_size}"
+  end
 
 end
