@@ -10,7 +10,7 @@ class UkulelesController < ApplicationController
 
     if @ukulele.save
       flash[:notice] = "Ukulele saved"
-      redirect_to user_ukulele_path(@user,@ukulele)
+      redirect_to user_ukulele_path(@user, @ukulele)
     else
       flash[:alert] = "Ukulele didn't save.  Try again."
       render :new
@@ -56,7 +56,7 @@ class UkulelesController < ApplicationController
   def update
     respond_to do |format|
       if @ukulele.update(ukulele_params)
-        format.html { redirect_to redirect_to user_ukulele_path(@user,@ukulele), notice: 'Ukulele was successfully updated.' }
+        format.html { redirect_to redirect_to user_ukulele_path(@user, @ukulele), notice: 'Ukulele was successfully updated.' }
       else
         format.html { render :edit }
       end
@@ -106,7 +106,7 @@ class UkulelesController < ApplicationController
       :length_body,
       :width,
       :depth,
-      {photos: []},
+      { photos: [] },
       :nickname
     )
   end

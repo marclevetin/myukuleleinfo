@@ -94,9 +94,9 @@ pre code {
 }
 
 .container {
-  display: block;
   background-color: $beige;
-  min-height: 400px;
+  display: block;
   height: auto;
-  opacity: .8
+  min-height: 400px;
+  opacity: 0.8;
 }
