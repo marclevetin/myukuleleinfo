@@ -32,18 +32,17 @@ class SearchContainer extends Component {
   }
 
   handleChange(event) {
-    this.setState({ content: event.target.value });
-    this.getSearchResults();
+    this.setState({ content: event.target.value }, this.getSearchResults());
   }
 
   render() {
     let searchResults = this.state.ukuleles["ukuleles"]
-    console.log(searchResults)
     let ukuleles = searchResults.map(uke => {
       return(
         <Ukulele
           key={uke.id}
           id={uke.id}
+          user_id={uke.user_id}
           type={uke.instrument_type}
           size={uke.ukulele_size}
           shape={uke.ukulele_shape}

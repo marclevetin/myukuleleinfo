@@ -3,9 +3,9 @@ import React, {Component} from 'react'
 const Ukulele = (props) => {
   return(
     <tr className='ukulelerow'>
-      <td>{props.type}</td>
-      <td>{props.size}</td>
-      <td>{props.shape}</td>
+        <td><a href={"users/" + props.user_id + "/ukuleles/" + props.id}>{props.type}</a></td>
+        <td><a href={"users/" + props.user_id + "/ukuleles/" + props.id}>{props.size}</a></td>
+        <td><a href={"users/" + props.user_id + "/ukuleles/" + props.id}>{props.shape}</a></td>
     </tr>
   )
 }

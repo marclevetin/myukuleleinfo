@@ -40,7 +40,7 @@
 
         <div class="field">
           <%= f.label :serial_number %>
-          <%= f.text_field :serial_number, autofocus: true %>
+          <%= f.text_field :serial_number, autofocus: true, step: :any %>
         </div>
 
         <div class="field">
@@ -109,7 +109,7 @@
 
         <div class="field">
           <%= f.label :string_count %>
-          <%= f.number_field :string_count, autofocus: true %>
+          <%= f.number_field :string_count, autofocus: true, step: :any %>
         </div>
 
         <div class="field">
@@ -138,27 +138,27 @@
       <%= field_set_tag "Dimensions" do %>
         <div class="field">
           <%= f.label :width %>
-          <%= f.number_field :width, autofocus: true %>
+          <%= f.number_field :width, autofocus: true, step: :any %>
         </div>
 
         <div class="field">
           <%= f.label :depth %>
-          <%= f.number_field :depth, autofocus: true %>
+          <%= f.number_field :depth, autofocus: true, step: :any %>
         </div>
 
         <div class="field">
           <%= f.label :neck_width %>
-          <%= f.number_field :neck_width, autofocus: true %>
+          <%= f.number_field :neck_width, autofocus: true, step: :any %>
         </div>
 
         <div class="field">
           <%= f.label :length_scale %>
-          <%= f.number_field :length_scale, autofocus: true %>
+          <%= f.number_field :length_scale, autofocus: true, step: :any %>
         </div>
 
         <div class="field">
           <%= f.label :length_body %>
-          <%= f.number_field :length_body, autofocus: true %>
+          <%= f.number_field :length_body, autofocus: true, step: :any %>
         </div>
 
         <div class="field">
