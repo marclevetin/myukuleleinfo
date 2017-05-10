@@ -4,6 +4,7 @@ class UkulelesController < ApplicationController
 
 
   def create
+    binding.pry
     @user = current_user
     @ukulele = Ukulele.create(ukulele_params)
     @ukulele.user = @user
@@ -36,6 +37,7 @@ class UkulelesController < ApplicationController
     @ukuleles.each do |uke|
       @vbulletin << uke.vbulletin
     end
+
   end
 
 
@@ -51,6 +53,7 @@ class UkulelesController < ApplicationController
     @ukulele = Ukulele.find(params[:id])
     @nickname = set_nickname
     @vbulletin = @ukulele.vbulletin
+    @youtube = @ukulele.youtube(@ukulele.video)
   end
 
   def update
@@ -107,7 +110,8 @@ class UkulelesController < ApplicationController
       :width,
       :depth,
       { photos: [] },
-      :nickname
+      :nickname,
+      :video
     )
   end
 

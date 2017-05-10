@@ -161,9 +161,17 @@
           <%= f.number_field :length_body, autofocus: true, step: :any %>
         </div>
 
+      <% end %>
+
+      <%= field_set_tag "Media" do %>
         <div class="field">
           <%= f.label :photos %>
           <%= f.file_field :photos, multiple: true %>
+        </div>
+
+        <div class="field">
+          <%= f.label :video %>
+          <%= f.url_field :video, autofocus: true, placeholder: "https://www.youtube.com/..." %>
         </div>
 
       <% end %>
