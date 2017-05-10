@@ -92,3 +92,11 @@ pre code {
   padding: 1em;
   word-wrap: break-word;
 }
+
+.container {
+  display: block;
+  background-color: $beige;
+  min-height: 400px;
+  height: auto;
+  opacity: .8
+}

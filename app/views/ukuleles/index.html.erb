@@ -12,24 +12,20 @@
         <th>Size</th>
         <th>Shape</th>
         <th>Luthier</th>
-        <th>&nbsp;</th>
       </tr>
         <tr>
           <% @ukuleles.each do |uke| %>
           <td>
-            <%= uke.instrument_type %>
+            <%= link_to uke.instrument_type.titleize, user_ukulele_path(current_user, uke.id) %>
           </td>
           <td>
-            <%= uke.ukulele_size %>
+            <%= link_to uke.ukulele_size.titleize, user_ukulele_path(current_user, uke.id) %>
           </td>
           <td>
-            <%= uke.ukulele_shape %>
+            <%= link_to uke.ukulele_shape.titleize, user_ukulele_path(current_user, uke.id) %>
           </td>
           <td>
-            <%= uke.luthier %>
-          </td>
-          <td>
-            <%= link_to "more", user_ukulele_path(current_user, uke.id) %>
+            <%= link_to uke.luthier, user_ukulele_path(current_user, uke.id) %>
           </td>
         </tr>
           <% end %>
@@ -41,7 +37,7 @@
   <div class="small-12 columns">
     <h2>Share</h2>
     <p>
-      Copy and paste the code below into your profile on <a href="http://forum.ukuleleunderground.com/profile.php?do=updatesignature" target="_blank">Ukulele Underground forums.</a>
+      Copy and paste the code below into your profile on <a href="http://forum.ukuleleunderground.com/" target="_blank">Ukulele Underground forums.</a>
     </p>
     <div class="small-12">
       <pre>

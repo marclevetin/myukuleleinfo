@@ -44,6 +44,7 @@ class SearchContainer extends Component {
         <Ukulele
           key={uke.id}
           id={uke.id}
+          user_id={uke.user_id}
           type={uke.instrument_type}
           size={uke.ukulele_size}
           shape={uke.ukulele_shape}
