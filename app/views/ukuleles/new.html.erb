@@ -13,17 +13,17 @@
       <%= field_set_tag "Basics (required)" do %>
         <div class="field">
           <%= f.label :instrument_type %>
-          <%= f.text_field :instrument_type, autofocus: true %>
+          <%= f.select(:instrument_type, options_from_collection_for_select(@instrument_type, :instrument_type, :instrument_type)) %>
         </div>
 
         <div class="field">
           <%= f.label :ukulele_shape %>
-          <%= f.text_field :ukulele_shape, autofocus: true %>
+          <%= f.select(:ukulele_shape, options_from_collection_for_select(@ukulele_shape, :ukulele_shape, :ukulele_shape)) %>
         </div>
 
         <div class="field">
           <%= f.label :ukulele_size %>
-          <%= f.text_field :ukulele_size, autofocus: true %>
+          <%= f.select(:ukulele_size, options_from_collection_for_select(@ukulele_size, :ukulele_size, :ukulele_size)) %>
         </div>
       <% end %>
 

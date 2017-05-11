@@ -32,7 +32,9 @@ body {
   background-image: url("https://s3.amazonaws.com/my-ukulele-info/background.jpg");
   background-repeat: no-repeat;
   background-blend-mode: screen, darken;
-
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 
 a {
