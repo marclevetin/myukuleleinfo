@@ -4,7 +4,6 @@ class UkulelesController < ApplicationController
 
 
   def create
-    binding.pry
     @user = current_user
     @ukulele = Ukulele.create(ukulele_params)
     @ukulele.user = @user
@@ -37,7 +36,6 @@ class UkulelesController < ApplicationController
     @ukuleles.each do |uke|
       @vbulletin << uke.vbulletin
     end
-
   end
 
 
