@@ -6,6 +6,7 @@ class UkulelesController < ApplicationController
   def create
     @user = current_user
     @ukulele = Ukulele.create(ukulele_params)
+    binding.pry
     @ukulele.user = @user
 
     if @ukulele.save
