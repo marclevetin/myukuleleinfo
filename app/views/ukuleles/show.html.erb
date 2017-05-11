@@ -149,14 +149,15 @@
     <p>
       Copy and paste the code below into your profile on <a href="http://forum.ukuleleunderground.com/" target="_blank">Ukulele Underground forums.</a>
     </p>
-    <div class="small-12">
-      <pre>
-        <code>
-          [B]My Ukuleles[/B]
-          [URL="<%= request.original_url %>"]<%= @vbulletin %>[/URL]
-          [SIZE=1][I][URL="http://my-ukulele-info.heroku.com"]Powered by My Ukulele Info[/URL][/I][/SIZE]
-        </code>
-      </pre>
+    <button class="btn" data-clipboard-target="#markup" >
+      Copy code
+    </button>
+    <div id="markup" class="small-12">
+      <textarea id="bar" rows="4">
+        [B]My Ukuleles[/B]
+        [URL="<%= request.original_url %>"]<%= @vbulletin %>[/URL]
+        [SIZE=1][I][URL="http://my-ukulele-info.heroku.com"]Powered by My Ukulele Info[/URL][/I][/SIZE]
+      </textarea>
     </div>
   </div>
 </div>

@@ -7,7 +7,6 @@
     <title><%= content_for?(:title) ? yield(:title) : "My Ukulele Info" %></title>
 
     <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
 
@@ -44,5 +43,6 @@
 
     <%= yield %>
 
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
   </body>
 </html>
