@@ -55,7 +55,7 @@ class Ukulele < ApplicationRecord
   end
 
   def youtube(url)
-    if !url.empty?
+    if url.present?
       uid_start = url.index("=") + 1
       uid_end = uid_start + 11
       url.slice(uid_start, uid_end)
