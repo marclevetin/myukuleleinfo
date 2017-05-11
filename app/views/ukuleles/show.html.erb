@@ -132,7 +132,14 @@
 <div class="row">
   <div class="small-12 columns">
     <h2>Video</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @youtube %>" frameborder="0" allowfullscreen></iframe>
+    <% if @youtube %>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @youtube %>" frameborder="0" allowfullscreen></iframe>
+    <% else %>
+      <p>
+        This ukulele doesn't have a video.
+        <% if current_user %> <%= link_to 'Add one.', edit_user_ukulele_path(current_user, @ukulele) %><% end %>
+      </p>
+    <% end %>
   </div>
 </div>
 
