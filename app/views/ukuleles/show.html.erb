@@ -120,14 +120,19 @@
 <div class="row">
   <div class="small-12 columns">
     <h2>Pictures</h2>
-  </div>
-</div>
-<div class="row">
-  <ul>
-    <% @ukulele.photos.each do |pic| %>
-      <li><a href="<%= pic.url %>"><img src="<%= pic.url %>"></a></li>
+    <% if @ukulele.photos.present? %>
+      <ul>
+        <% @ukulele.photos.each do |pic| %>
+          <li><a href="<%= pic.url %>"><img src="<%= pic.url %>"></a></li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p>
+        This ukulele doesn't have any photos.
+        <% if current_user %> <%= link_to 'Add some.', edit_user_ukulele_path(current_user, @ukulele) %><% end %>
+      </p>
     <% end %>
-  </ul>
+  </div>
 </div>
 <div class="row">
   <div class="small-12 columns">
