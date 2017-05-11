@@ -43,40 +43,40 @@
     <div class="small-12 medium-6 large-4 columns container">
       <h3>Materials</h3>
       <p>
-        Body top: <%= @ukulele.body_top.titleize %>
+        Body top: <%= @ukulele.body_top.to_s.titleize %>
       </p>
       <p>
-        Body sides: <%= @ukulele.body_sides.titleize %>
+        Body sides: <%= @ukulele.body_sides.to_s.titleize %>
       </p>
       <p>
-        Body back: <%= @ukulele.body_back.titleize %>
+        Body back: <%= @ukulele.body_back.to_s.titleize %>
       </p>
       <p>
-        Body neck: <%= @ukulele.body_neck.titleize %>
+        Body neck: <%= @ukulele.body_neck.to_s.titleize %>
       </p>
       <p>
-        Body fretboard: <%= @ukulele.body_fretboard.titleize %>
+        Body fretboard: <%= @ukulele.body_fretboard.to_s.titleize %>
       </p>
       <p>
-        Body binding: <%= @ukulele.body_binding.titleize %>
+        Body binding: <%= @ukulele.body_binding.to_s.titleize %>
       </p>
       <p>
-        Nut material: <%= @ukulele.nut_material.titleize %>
+        Nut material: <%= @ukulele.nut_material.to_s.titleize %>
       </p>
       <p>
-        Saddle material: <%= @ukulele.saddle_material.titleize %>
+        Saddle material: <%= @ukulele.saddle_material.to_s.titleize %>
       </p>
     </div>
     <div class="small-12 medium-6 large-4 columns container">
       <h3>Tuners, strings, electrics</h3>
       <p>
-        Tuner type: <%= @ukulele.tuner_type.titleize %>
+        Tuner type: <%= @ukulele.tuner_type.to_s.titleize %>
       </p>
       <p>
         Tuner manufacture: <%= @ukulele.tuner_manufacture %>
       </p>
       <p>
-        String manufacture: <%= @ukulele.string_manufacture.titleize %>
+        String manufacture: <%= @ukulele.string_manufacture.to_s.titleize %>
       </p>
       <p>
         String count: <%= @ukulele.string_count %>
@@ -85,16 +85,16 @@
         String tuning: <%= @ukulele.string_tuning %>
       </p>
       <p>
-        Pickup: <%= @ukulele.pickup.titleize %>
+        Pickup: <%= @ukulele.pickup.to_s.titleize %>
       </p>
     </div>
     <div class="small-12 medium-6 large-4 columns container">
       <h3>Finish</h3>
       <p>
-        Finish type: <%= @ukulele.finish_type.titleize %>
+        Finish type: <%= @ukulele.finish_type.to_s.titleize %>
       </p>
       <p>
-        Finish look: <%= @ukulele.finish_look.titleize %>
+        Finish look: <%= @ukulele.finish_look.to_s.titleize %>
       </p>
     </div>
     <div class="small-12 medium-6 large-4 columns container">
@@ -149,14 +149,19 @@
     <p>
       Copy and paste the code below into your profile on <a href="http://forum.ukuleleunderground.com/" target="_blank">Ukulele Underground forums.</a>
     </p>
-    <div class="small-12">
-      <pre>
-        <code>
-          [B]My Ukuleles[/B]
-          [URL="<%= request.original_url %>"]<%= @vbulletin %>[/URL]
-          [SIZE=1][I][URL="http://my-ukulele-info.heroku.com"]Powered by My Ukulele Info[/URL][/I][/SIZE]
-        </code>
-      </pre>
+
+    <p>
+      Copy and paste the code below into your profile on <a href="http://forum.ukuleleunderground.com/" target="_blank">Ukulele Underground forums.</a>
+    </p>
+    <button class="btn" data-clipboard-target="#markup" >
+      Copy code
+    </button>
+    <div id="markup" class="small-12">
+      <textarea id="bar" rows="4">
+        [B]My Ukuleles[/B]
+        [URL="<%= request.original_url %>"]<%= @vbulletin %>[/URL]
+        [SIZE=1][I][URL="http://my-ukulele-info.heroku.com"]Powered by My Ukulele Info[/URL][/I][/SIZE]
+      </textarea>
     </div>
   </div>
 </div>

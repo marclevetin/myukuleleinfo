@@ -102,3 +102,12 @@ pre code {
   min-height: 400px;
   opacity: 0.8;
 }
+
+button {
+  display: block;
+  color: $blue;
+  padding: .5em;
+  border: 1px solid $orange;
+  background-color: $orange;
+  margin: .5em;
+}
