@@ -51,6 +51,7 @@ class UkulelesController < ApplicationController
     @ukulele = Ukulele.find(params[:id])
     @nickname = set_nickname
     @vbulletin = @ukulele.vbulletin
+    @youtube = @ukulele.youtube(@ukulele.video)
   end
 
   def update
@@ -107,7 +108,8 @@ class UkulelesController < ApplicationController
       :width,
       :depth,
       { photos: [] },
-      :nickname
+      :nickname,
+      :video
     )
   end
 
