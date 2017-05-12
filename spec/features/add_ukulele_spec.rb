@@ -45,6 +45,7 @@ feature "A user adds a ukulele" do
       select('pineapple', :from => 'ukulele_ukulele_shape')
       select('tenor', :from => 'ukulele_ukulele_size')
       fill_in 'purchase_date', with: '01/01/2017'
+
       click_button 'Add a ukulele'
 
       expect(page).to have_content("01/01/2017")
@@ -61,17 +62,13 @@ feature "A user adds a ukulele" do
       login_as(user)
       visit user_ukuleles_path(user)
       click_link 'Add a ukulele'
-      fill_in 'nickname', with: 'Best uke ever'
-      select('banjolele', :from => 'ukulele_instrument_type')
-      select('pineapple', :from => 'ukulele_ukulele_shape')
-      select('tenor', :from => 'ukulele_ukulele_size')
+      
       fill_in 'purchase_date', with: 'abc'
-      click_button 'Add a ukulele'
 
       expect(page).not_to have_content("abc")
     end
 
-    xscenario "width does not accept text" do
+    scenario "width does not accept text" do
       user = User.create(
         first_name: 'My',
         last_name: 'Ukulele',
@@ -82,17 +79,13 @@ feature "A user adds a ukulele" do
       login_as(user)
       visit user_ukuleles_path(user)
       click_link 'Add a ukulele'
-      fill_in 'nickname', with: 'Best uke ever'
-      select('banjolele', :from => 'ukulele_instrument_type')
-      select('pineapple', :from => 'ukulele_ukulele_shape')
-      select('tenor', :from => 'ukulele_ukulele_size')
+
       fill_in 'width', with: 'abc'
-      click_button 'Add a ukulele'
 
-      expect(page).to have_content("Best uke ever")
+      expect(page).not_to have_content("abc")
     end
 
-    xscenario "depth does not accept text" do
+    scenario "depth does not accept text" do
       user = User.create(
         first_name: 'My',
         last_name: 'Ukulele',
@@ -103,17 +96,13 @@ feature "A user adds a ukulele" do
       login_as(user)
       visit user_ukuleles_path(user)
       click_link 'Add a ukulele'
-      fill_in 'nickname', with: 'Best uke ever'
-      select('banjolele', :from => 'ukulele_instrument_type')
-      select('pineapple', :from => 'ukulele_ukulele_shape')
-      select('tenor', :from => 'ukulele_ukulele_size')
+
       fill_in 'depth', with: 'abc'
-      click_button 'Add a ukulele'
 
       expect(page).not_to have_content("abc")
     end
 
-    xscenario "neck width does not accept text" do
+    scenario "neck width does not accept text" do
       user = User.create(
         first_name: 'My',
         last_name: 'Ukulele',
@@ -124,17 +113,13 @@ feature "A user adds a ukulele" do
       login_as(user)
       visit user_ukuleles_path(user)
       click_link 'Add a ukulele'
-      fill_in 'nickname', with: 'Best uke ever'
-      select('banjolele', :from => 'ukulele_instrument_type')
-      select('pineapple', :from => 'ukulele_ukulele_shape')
-      select('tenor', :from => 'ukulele_ukulele_size')
+
       fill_in 'neck_width', with: 'abc'
-      click_button 'Add a ukulele'
 
       expect(page).not_to have_content("abc")
     end
 
-    xscenario "scale length does not accept text" do
+    scenario "scale length does not accept text" do
       user = User.create(
         first_name: 'My',
         last_name: 'Ukulele',
@@ -145,17 +130,13 @@ feature "A user adds a ukulele" do
       login_as(user)
       visit user_ukuleles_path(user)
       click_link 'Add a ukulele'
-      fill_in 'nickname', with: 'Best uke ever'
-      select('banjolele', :from => 'ukulele_instrument_type')
-      select('pineapple', :from => 'ukulele_ukulele_shape')
-      select('tenor', :from => 'ukulele_ukulele_size')
+
       fill_in 'length_scale', with: 'abc'
-      click_button 'Add a ukulele'
 
       expect(page).not_to have_content("abc")
     end
 
-    xscenario "body length does not accept text" do
+    scenario "body length does not accept text" do
       user = User.create(
         first_name: 'My',
         last_name: 'Ukulele',
@@ -166,12 +147,8 @@ feature "A user adds a ukulele" do
       login_as(user)
       visit user_ukuleles_path(user)
       click_link 'Add a ukulele'
-      fill_in 'nickname', with: 'Best uke ever'
-      select('banjolele', :from => 'ukulele_instrument_type')
-      select('pineapple', :from => 'ukulele_ukulele_shape')
-      select('tenor', :from => 'ukulele_ukulele_size')
+
       fill_in 'length_body', with: 'abc'
-      click_button 'Add a ukulele'
 
       expect(page).not_to have_content("abc")
     end
