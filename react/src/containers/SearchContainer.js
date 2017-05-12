@@ -42,8 +42,7 @@ class SearchContainer extends Component {
       if (uke.photos[0] === undefined) {
         photo = "";
       } else {
-        photo = uke.photos[0]["thumb"]["url"];
-        console.log(photo);
+        photo = uke.photos[0].thumb.url;
       }
       return(
         <Ukulele
@@ -53,7 +52,7 @@ class SearchContainer extends Component {
           type={uke.instrument_type}
           size={uke.ukulele_size}
           shape={uke.ukulele_shape}
-          photo = {photo}
+          photo={photo}
         />
       )
     })
