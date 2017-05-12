@@ -7,7 +7,7 @@
     <%= form_for [@user, @ukulele] do |f| %>
       <div class="field">
         <%= f.label :nickname %>
-        <%= f.text_field :nickname, autofocus: true %>
+        <%= f.text_field :nickname, autofocus: true, id: 'nickname' %>
       </div>
 
       <%= field_set_tag "Basics (required)" do %>
@@ -30,135 +30,135 @@
       <%= field_set_tag "Manufacture" do %>
         <div class="field">
           <%= f.label :luthier %>
-          <%= f.text_field :luthier, autofocus: true %>
+          <%= f.text_field :luthier, autofocus: true, id: 'luthier' %>
         </div>
 
         <div class="field">
           <%= f.label :model %>
-          <%= f.text_field :model, autofocus: true %>
+          <%= f.text_field :model, autofocus: true, id: 'model' %>
         </div>
 
         <div class="field">
           <%= f.label :serial_number %>
-          <%= f.text_field :serial_number, autofocus: true, step: :any %>
+          <%= f.text_field :serial_number, autofocus: true, step: :any, id: 'serial_number' %>
         </div>
 
         <div class="field">
           <%= f.label :purchase_date %>
-          <%= f.date_field :purchase_date, autofocus: true %>
+          <%= f.date_field :purchase_date, autofocus: true, id: 'purchase_date' %>
         </div>
       <% end %>
 
       <%= field_set_tag "Materials" do %>
         <div class="field">
           <%= f.label :body_top %>
-          <%= f.text_field :body_top, autofocus: true %>
+          <%= f.text_field :body_top, autofocus: true, id: 'body_top' %>
         </div>
 
         <div class="field">
           <%= f.label :body_sides %>
-          <%= f.text_field :body_sides, autofocus: true %>
+          <%= f.text_field :body_sides, autofocus: true, id: 'body_sides' %>
         </div>
 
         <div class="field">
           <%= f.label :body_back %>
-          <%= f.text_field :body_back, autofocus: true %>
+          <%= f.text_field :body_back, autofocus: true, id: 'body_back' %>
         </div>
 
         <div class="field">
           <%= f.label :body_neck %>
-          <%= f.text_field :body_neck, autofocus: true %>
+          <%= f.text_field :body_neck, autofocus: true, id: 'body_neck' %>
         </div>
 
         <div class="field">
           <%= f.label :body_fretboard %>
-          <%= f.text_field :body_fretboard, autofocus: true %>
+          <%= f.text_field :body_fretboard, autofocus: true, id: 'body_fretboard' %>
         </div>
 
         <div class="field">
           <%= f.label :body_binding %>
-          <%= f.text_field :body_binding, autofocus: true %>
+          <%= f.text_field :body_binding, autofocus: true, id: 'body_binding' %>
         </div>
 
         <div class="field">
           <%= f.label :nut_material %>
-          <%= f.text_field :nut_material, autofocus: true %>
+          <%= f.text_field :nut_material, autofocus: true, id: 'nut_material' %>
         </div>
 
         <div class="field">
           <%= f.label :saddle_material %>
-          <%= f.text_field :saddle_material, autofocus: true %>
+          <%= f.text_field :saddle_material, autofocus: true, id: 'saddle_material' %>
         </div>
       <% end %>
 
       <%= field_set_tag "Tuners, strings, electrics" do %>
         <div class="field">
           <%= f.label :tuner_type %>
-          <%= f.text_field :tuner_type, autofocus: true %>
+          <%= f.text_field :tuner_type, autofocus: true, id: 'tuner_type' %>
         </div>
 
         <div class="field">
           <%= f.label :tuner_manufacture %>
-          <%= f.text_field :tuner_manufacture, autofocus: true %>
+          <%= f.text_field :tuner_manufacture, autofocus: true, id: 'tuner_manufacture' %>
         </div>
 
         <div class="field">
           <%= f.label :string_manufacture %>
-          <%= f.text_field :string_manufacture, autofocus: true %>
+          <%= f.text_field :string_manufacture, autofocus: true, id: 'string_manufacture' %>
         </div>
 
         <div class="field">
           <%= f.label :string_count %>
-          <%= f.number_field :string_count, autofocus: true, step: :any %>
+          <%= f.number_field :string_count, autofocus: true, step: :any, id: 'string_count' %>
         </div>
 
         <div class="field">
           <%= f.label :string_tuning %>
-          <%= f.text_field :string_tuning, autofocus: true %>
+          <%= f.text_field :string_tuning, autofocus: true, id: 'string_tuning' %>
         </div>
 
         <div class="field">
           <%= f.label :pickup %>
-          <%= f.text_field :pickup, autofocus: true %>
+          <%= f.text_field :pickup, autofocus: true, id: 'pickup' %>
         </div>
       <% end %>
 
       <%= field_set_tag "Finish" do %>
         <div class="field">
           <%= f.label :finish_type %>
-          <%= f.text_field :finish_type, autofocus: true %>
+          <%= f.text_field :finish_type, autofocus: true, id: 'finish_type' %>
         </div>
 
         <div class="field">
           <%= f.label :finish_look %>
-          <%= f.text_field :finish_look, autofocus: true %>
+          <%= f.text_field :finish_look, autofocus: true, id: 'finish_look' %>
         </div>
       <% end %>
 
       <%= field_set_tag "Dimensions" do %>
         <div class="field">
           <%= f.label :width %>
-          <%= f.number_field :width, autofocus: true, step: :any %>
+          <%= f.number_field :width, autofocus: true, step: :any, id: 'width' %>
         </div>
 
         <div class="field">
           <%= f.label :depth %>
-          <%= f.number_field :depth, autofocus: true, step: :any %>
+          <%= f.number_field :depth, autofocus: true, step: :any, id: 'depth' %>
         </div>
 
         <div class="field">
           <%= f.label :neck_width %>
-          <%= f.number_field :neck_width, autofocus: true, step: :any %>
+          <%= f.number_field :neck_width, autofocus: true, step: :any, id: 'neck_width' %>
         </div>
 
         <div class="field">
           <%= f.label :length_scale %>
-          <%= f.number_field :length_scale, autofocus: true, step: :any %>
+          <%= f.number_field :length_scale, autofocus: true, step: :any, id: 'length_scale' %>
         </div>
 
         <div class="field">
           <%= f.label :length_body %>
-          <%= f.number_field :length_body, autofocus: true, step: :any %>
+          <%= f.number_field :length_body, autofocus: true, step: :any, id: 'length_body' %>
         </div>
 
       <% end %>
@@ -166,12 +166,12 @@
       <%= field_set_tag "Media" do %>
         <div class="field">
           <%= f.label :photos %>
-          <%= f.file_field :photos, multiple: true %>
+          <%= f.file_field :photos, multiple: true, id: 'photos' %>
         </div>
 
         <div class="field">
           <%= f.label :video %>
-          <%= f.url_field :video, autofocus: true, placeholder: "https://www.youtube.com/..." %>
+          <%= f.url_field :video, autofocus: true, placeholder: "https://www.youtube.com/...", id: 'video' %>
         </div>
 
       <% end %>

@@ -55,9 +55,10 @@ class UkulelesController < ApplicationController
   end
 
   def update
+    @user = current_user
     respond_to do |format|
       if @ukulele.update(ukulele_params)
-        format.html { redirect_to redirect_to user_ukulele_path(@user, @ukulele), notice: 'Ukulele was successfully updated.' }
+        format.html { redirect_to user_ukulele_path(@user, @ukulele), notice: 'Ukulele was successfully updated.' }
       else
         format.html { render :edit }
       end
