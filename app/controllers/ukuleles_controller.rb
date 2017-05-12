@@ -20,7 +20,10 @@ class UkulelesController < ApplicationController
   def destroy
     @ukulele.destroy
     respond_to do |format|
-      format.html { redirect_to user_ukuleles_path(current_user), notice: 'Ukulele was successfully deleted.' }
+      format.html {
+        redirect_to user_ukuleles_path(current_user),
+        notice: 'Ukulele was successfully deleted.'
+      }
     end
   end
 
@@ -58,7 +61,10 @@ class UkulelesController < ApplicationController
     @user = current_user
     respond_to do |format|
       if @ukulele.update(ukulele_params)
-        format.html { redirect_to user_ukulele_path(@user, @ukulele), notice: 'Ukulele was successfully updated.' }
+        format.html {
+          redirect_to user_ukulele_path(@user, @ukulele),
+          notice: 'Ukulele was successfully updated.'
+        }
       else
         format.html { render :edit }
       end
