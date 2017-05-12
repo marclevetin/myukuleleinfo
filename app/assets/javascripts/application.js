@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require foundation
 //= require clipboard
+//= require lightbox
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
