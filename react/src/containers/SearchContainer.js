@@ -38,6 +38,13 @@ class SearchContainer extends Component {
   render() {
     let searchResults = this.state.ukuleles["ukuleles"]
     let ukuleles = searchResults.map(uke => {
+    let photo;
+      if (uke.photos[0] === undefined) {
+        photo = "";
+      } else {
+        photo = uke.photos[0]["thumb"]["url"];
+        console.log(photo);
+      }
       return(
         <Ukulele
           key={uke.id}
@@ -46,6 +53,7 @@ class SearchContainer extends Component {
           type={uke.instrument_type}
           size={uke.ukulele_size}
           shape={uke.ukulele_shape}
+          photo = {photo}
         />
       )
     })
@@ -59,7 +67,7 @@ class SearchContainer extends Component {
         <table>
           <tbody>
           <tr>
-            <th>Type</th><th>Size</th><th>Shape</th>
+            <th>Pic</th><th>Type</th><th>Size</th><th>Shape</th>
           </tr>
               {ukuleles}
           </tbody>
