@@ -6,8 +6,7 @@ import Layout from './containers/Layout'
 import HomePageContainer from './containers/HomePageContainer'
 import UkuleleList from './containers/UkuleleList'
 
-
-$(function() {
+if(document.getElementById('app')){
   ReactDOM.render(
     <div className="row">
       <Router history={browserHistory}>
@@ -19,4 +18,4 @@ $(function() {
     </div>,
     document.getElementById('app')
   );
-});
+}
