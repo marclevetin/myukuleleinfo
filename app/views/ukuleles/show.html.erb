@@ -123,11 +123,13 @@
   </div>
 </div>
 <div class="row">
-  <ul>
-    <% @ukulele.photos.each do |pic| %>
-      <li><a href="<%= pic.url %>"><img src="<%= pic.url %>"></a></li>
-    <% end %>
-  </ul>
+    <div class="small-12 columns">
+      <% @ukulele.photos.each do |pic| %>
+        <a class="pic" href="<%= pic.url %>" data-lightbox="ukuleles" ><img class="example-image" src="<%= pic.thumb.url %>" alt=""/></a>
+      <% end %>
+    </div>
+  </div>
+  </section>
 </div>
 <div class="row">
   <div class="small-12 columns">
