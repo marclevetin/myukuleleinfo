@@ -46,7 +46,7 @@ feature "ukulele show page" do
   context "user is signed in" do
     scenario "details section appears" do
       ukulele = create(:ukulele)
-      login_as (ukulele.user)
+      login_as ukulele.user
       visit user_ukulele_path(ukulele.user_id, ukulele)
 
       expect(page).to have_content("Details")
@@ -60,7 +60,7 @@ feature "ukulele show page" do
 
     scenario "pictures section appears" do
       ukulele = create(:ukulele)
-      login_as (ukulele.user)
+      login_as ukulele.user
       visit user_ukulele_path(ukulele.user_id, ukulele)
 
       expect(page).to have_content("Pictures")
@@ -69,7 +69,7 @@ feature "ukulele show page" do
 
     scenario "video section appears" do
       ukulele = create(:ukulele)
-      login_as (ukulele.user)
+      login_as ukulele.user
       visit user_ukulele_path(ukulele.user_id, ukulele)
 
       expect(page).to have_content("Video")
