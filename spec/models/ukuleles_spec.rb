@@ -21,5 +21,35 @@ RSpec.describe Ukulele, type: :model do
       expect(ukulele.ukulele_size).to eq('soprano')
       expect(ukulele_no_size.valid?).to eq(false)
     end
+
+    it "youtube method can parse URL without extra arguments" do
+      url = "https://www.youtube.com/watch?v=eNxO9MpQ2vA"
+      expect(ukulele.youtube(url)).to eq('eNxO9MpQ2vA')
+    end
+
+    it "youtube method can parse share URL" do
+      url = "https://youtu.be/eNxO9MpQ2vA"
+      expect(ukulele.youtube(url)).to eq('eNxO9MpQ2vA')
+    end
+
+    it "youtube method can parse share URL with mid-video start" do
+      url = "https://youtu.be/eNxO9MpQ2vA?t=9s"
+      expect(ukulele.youtube(url)).to eq('eNxO9MpQ2vA')
+    end
+
+    it "youtube method can parse embed code" do
+      url = '<iframe width="560" height="315" src="https://www.youtube.com/embed/eNxO9MpQ2vA" frameborder="0" allowfullscreen></iframe>'
+      expect(ukulele.youtube(url)).to eq('eNxO9MpQ2vA')
+    end
+
+    it "youtube method can parse empty url" do
+      url = ""
+      expect(ukulele.youtube(url)).to eq('')
+    end
+
+    it "youtube method can parse nil url" do
+      url = nil
+      expect(ukulele.youtube(url)).to eq('')
+    end
   end
 end

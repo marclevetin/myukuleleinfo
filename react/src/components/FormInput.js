@@ -3,7 +3,7 @@ import React from 'react';
 const FormInput = (props) => {
   return (
     // <form onSubmit={props.handleFormSubmit}>
-    <form>
+    <form id="search">
       <input
         type="text"
         placeholder="Search for a ukulele"

@@ -55,10 +55,15 @@ class Ukulele < ApplicationRecord
   end
 
   def youtube(url)
-    if url.present?
+    if !url.present?
+      return ""
+    elsif url.include?("www.youtube.com/watch?v=")
       uid_start = url.index("=") + 1
-      uid_end = uid_start + 11
-      url.slice(uid_start, uid_end)
+    elsif url.include?("youtu.be/")
+      uid_start = url.index("be/") + 3
+    elsif url.include?("https://www.youtube.com/embed/")
+      uid_start = url.index("https://www.youtube.com/embed/") + 30
     end
+    url.slice(uid_start, 11)
   end
 end
