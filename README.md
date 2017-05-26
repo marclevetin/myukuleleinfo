@@ -2,7 +2,7 @@
 
 ![Build Status](https://codeship.com/projects/74ea9c20-0e9c-0135-dad5-2604a1807cee/status?branch=master)
 ![Code Climate](https://codeclimate.com/github/marclevetin/myukuleleinfo.png)
-![Coverage Status](https://coveralls.io/repos/marclevetin/myukuleleinfo/badge.png)
+[![Coverage Status](https://coveralls.io/repos/github/marclevetin/myukuleleinfo/badge.svg?branch=master)](https://coveralls.io/github/marclevetin/myukuleleinfo?branch=master)
 
 Allows ukulele enthusiasts afflicted with "UAS" ("UkuleleAcquisitionSyndrome") to post pictures, videos, and sound clips, share through social media, and plan for their next, inevitable purchase.
 
