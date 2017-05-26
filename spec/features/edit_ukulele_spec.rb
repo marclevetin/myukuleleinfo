@@ -10,6 +10,18 @@ feature "A user edits a ukulele" do
     expect(page).to have_content("Change a ukulele")
   end
 
+  scenario "edit page opens and changes are saved" do
+    ukulele = FactoryGirl.create(:ukulele)
+
+    login_as(ukulele.user)
+    visit edit_user_ukulele_path(ukulele.user, ukulele)
+    fill_in 'luthier', with: 'Luthier from edit page'
+    click_button 'Update'
+
+    expect(page).to have_content("Luthier from edit page")
+    expect(page).to have_content("Details")
+  end
+
   xscenario "date is formatted correctly" do
     user = User.create(
       first_name: 'My',

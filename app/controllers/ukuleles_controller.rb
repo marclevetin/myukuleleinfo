@@ -31,6 +31,8 @@ class UkulelesController < ApplicationController
     @instrument_type = InstrumentType.all
     @ukulele_shape = UkuleleShape.all
     @ukulele_size = UkuleleSize.all
+    @title = "Change a ukulele"
+    @user = current_user
   end
 
   def index
