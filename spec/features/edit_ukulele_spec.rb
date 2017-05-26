@@ -1,32 +1,13 @@
 require 'rails_helper'
 
-feature "A user adds a ukulele" do
+feature "A user edits a ukulele" do
 
-  before(:all) do
-    Rails.application.load_seed
-  end
+  scenario "edit page opens" do
+    ukulele = FactoryGirl.create(:ukulele)
 
-  xscenario "happy path" do
-    user = User.create(
-      first_name: 'My',
-      last_name: 'Ukulele',
-      email: 'my@ukulele.com',
-      password: 'password'
-    )
-
-    login_as(user)
-    visit user_ukuleles_path(user)
-    click_link 'Add a ukulele'
-    fill_in 'nickname', with: 'Best uke ever'
-    select('banjolele', from: 'ukulele_instrument_type')
-    select('pineapple', from: 'ukulele_ukulele_shape')
-    select('tenor', from: 'ukulele_ukulele_size')
-    click_button 'Add a ukulele'
-    expect(page).to have_content("Ukulele saved")
-    expect(page).to have_content("Best uke ever")
-    expect(page).to have_content("Banjolele")
-    expect(page).to have_content("Pineapple")
-    expect(page).to have_content("Tenor")
+    login_as(ukulele.user)
+    visit edit_user_ukulele_path(ukulele.user, ukulele)
+    expect(page).to have_content("Change a ukulele")
   end
 
   xscenario "date is formatted correctly" do
