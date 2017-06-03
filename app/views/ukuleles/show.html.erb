@@ -13,111 +13,113 @@
 <div class="row">
   <div class="small-12 columns">
     <h2>Details</h2>
-    <div class="small-12 medium-6 large-4 columns container">
-      <h3>Basics</h3>
-      <p>
-        Type: <%= @ukulele.instrument_type.to_s.titleize %>
-      </p>
-      <p>
-        Size: <%= @ukulele.ukulele_size.to_s.titleize %>
-      </p>
-      <p>
-        Shape: <%= @ukulele.ukulele_shape.to_s.titleize %>
-      </p>
-    </div>
-    <div class="small-12 medium-6 large-4 columns container">
-      <h3>Manufacture</h3>
-      <p>
-        Luthier: <%= @ukulele.luthier %>
-      </p>
-      <p>
-        Model: <%= @ukulele.model %>
-      </p>
-      <p>
-        Serial number: <%= @ukulele.serial_number %>
-      </p>
-      <p>
-        Purchase date:
-        <% if @ukulele.purchase_date.present? %>
-          <%= @ukulele.purchase_date.strftime("%m/%d/%Y") %>
-        <% end %>
-      </p>
-    </div>
-    <div class="small-12 medium-6 large-4 columns container">
-      <h3>Materials</h3>
-      <p>
-        Body top: <%= @ukulele.body_top.to_s.titleize %>
-      </p>
-      <p>
-        Body sides: <%= @ukulele.body_sides.to_s.titleize %>
-      </p>
-      <p>
-        Body back: <%= @ukulele.body_back.to_s.titleize %>
-      </p>
-      <p>
-        Body neck: <%= @ukulele.body_neck.to_s.titleize %>
-      </p>
-      <p>
-        Body fretboard: <%= @ukulele.body_fretboard.to_s.titleize %>
-      </p>
-      <p>
-        Body binding: <%= @ukulele.body_binding.to_s.titleize %>
-      </p>
-      <p>
-        Nut material: <%= @ukulele.nut_material.to_s.titleize %>
-      </p>
-      <p>
-        Saddle material: <%= @ukulele.saddle_material.to_s.titleize %>
-      </p>
-    </div>
-    <div class="small-12 medium-6 large-4 columns container">
-      <h3>Tuners, strings, electrics</h3>
-      <p>
-        Tuner type: <%= @ukulele.tuner_type.to_s.titleize %>
-      </p>
-      <p>
-        Tuner manufacture: <%= @ukulele.tuner_manufacture %>
-      </p>
-      <p>
-        String manufacture: <%= @ukulele.string_manufacture.to_s.titleize %>
-      </p>
-      <p>
-        String count: <%= @ukulele.string_count %>
-      </p>
-      <p>
-        String tuning: <%= @ukulele.string_tuning %>
-      </p>
-      <p>
-        Pickup: <%= @ukulele.pickup.to_s.titleize %>
-      </p>
-    </div>
-    <div class="small-12 medium-6 large-4 columns container">
-      <h3>Finish</h3>
-      <p>
-        Finish type: <%= @ukulele.finish_type.to_s.titleize %>
-      </p>
-      <p>
-        Finish look: <%= @ukulele.finish_look.to_s.titleize %>
-      </p>
-    </div>
-    <div class="small-12 medium-6 large-4 columns container">
-      <h3>Dimensions</h3>
-      <p>
-        Width: <%= @ukulele.width %>
-      </p>
-      <p>
-        Depth: <%= @ukulele.depth %>
-      </p>
-      <p>
-        Neck width: <%= @ukulele.neck_width %>
-      </p>
-      <p>
-        Scale length: <%= @ukulele.length_scale %>
-      </p>
-      <p>
-        Body length: <%= @ukulele.length_body %>
-      </p>
-    </div>
+  </div>
+</div>
+<div class="row bigcontainer">
+  <div class="small-12 medium-6 large-4 columns container">
+    <h3>Basics</h3>
+    <p>
+      Type: <%= @ukulele.instrument_type.to_s.titleize %>
+    </p>
+    <p>
+      Size: <%= @ukulele.ukulele_size.to_s.titleize %>
+    </p>
+    <p>
+      Shape: <%= @ukulele.ukulele_shape.to_s.titleize %>
+    </p>
+  </div>
+  <div class="small-12 medium-6 large-4 columns container">
+    <h3>Manufacture</h3>
+    <p>
+      Luthier: <%= @ukulele.luthier %>
+    </p>
+    <p>
+      Model: <%= @ukulele.model %>
+    </p>
+    <p>
+      Serial number: <%= @ukulele.serial_number %>
+    </p>
+    <p>
+      Purchase date:
+      <% if @ukulele.purchase_date.present? %>
+        <%= @ukulele.purchase_date.strftime("%m/%d/%Y") %>
+      <% end %>
+    </p>
+  </div>
+  <div class="small-12 medium-6 large-4 columns container">
+    <h3>Materials</h3>
+    <p>
+      Body top: <%= @ukulele.body_top.to_s.titleize %>
+    </p>
+    <p>
+      Body sides: <%= @ukulele.body_sides.to_s.titleize %>
+    </p>
+    <p>
+      Body back: <%= @ukulele.body_back.to_s.titleize %>
+    </p>
+    <p>
+      Body neck: <%= @ukulele.body_neck.to_s.titleize %>
+    </p>
+    <p>
+      Body fretboard: <%= @ukulele.body_fretboard.to_s.titleize %>
+    </p>
+    <p>
+      Body binding: <%= @ukulele.body_binding.to_s.titleize %>
+    </p>
+    <p>
+      Nut material: <%= @ukulele.nut_material.to_s.titleize %>
+    </p>
+    <p>
+      Saddle material: <%= @ukulele.saddle_material.to_s.titleize %>
+    </p>
+  </div>
+  <div class="small-12 medium-6 large-4 columns container">
+    <h3>Tuners, strings, electrics</h3>
+    <p>
+      Tuner type: <%= @ukulele.tuner_type.to_s.titleize %>
+    </p>
+    <p>
+      Tuner manufacture: <%= @ukulele.tuner_manufacture %>
+    </p>
+    <p>
+      String manufacture: <%= @ukulele.string_manufacture.to_s.titleize %>
+    </p>
+    <p>
+      String count: <%= @ukulele.string_count %>
+    </p>
+    <p>
+      String tuning: <%= @ukulele.string_tuning %>
+    </p>
+    <p>
+      Pickup: <%= @ukulele.pickup.to_s.titleize %>
+    </p>
+  </div>
+  <div class="small-12 medium-6 large-4 columns container">
+    <h3>Finish</h3>
+    <p>
+      Finish type: <%= @ukulele.finish_type.to_s.titleize %>
+    </p>
+    <p>
+      Finish look: <%= @ukulele.finish_look.to_s.titleize %>
+    </p>
+  </div>
+  <div class="small-12 medium-6 large-4 columns container">
+    <h3>Dimensions</h3>
+    <p>
+      Width: <%= @ukulele.width %>
+    </p>
+    <p>
+      Depth: <%= @ukulele.depth %>
+    </p>
+    <p>
+      Neck width: <%= @ukulele.neck_width %>
+    </p>
+    <p>
+      Scale length: <%= @ukulele.length_scale %>
+    </p>
+    <p>
+      Body length: <%= @ukulele.length_body %>
+    </p>
   </div>
 </div>
 <div class="row">

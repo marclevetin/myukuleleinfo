@@ -98,10 +98,7 @@ pre code {
 }
 
 .container {
-  background-color: $beige;
-  display: block;
   height: auto;
-  min-height: 400px;
   opacity: 0.8;
 }
 
@@ -112,4 +109,8 @@ button {
   display: block;
   margin: 0.5em;
   padding: 0.5em;
+}
+
+.bigcontainer {
+  background-color: $beige;
 }
