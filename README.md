@@ -6,6 +6,10 @@
 
 Allows ukulele enthusiasts afflicted with "UAS" ("UkuleleAcquisitionSyndrome") to post pictures, videos, and sound clips, share through social media, and plan for their next, inevitable purchase.
 
+## Demo
+https://my-ukulele-info.herokuapp.com/
+Contact me for login credentials to a populated account if you're interested.
+
 ## Built With
 
 * [ReactJS](https://facebook.github.io/react/) - Used to generate pages before user sign in
